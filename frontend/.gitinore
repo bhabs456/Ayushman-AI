@@ -1,0 +1,24 @@
+# Node.js / npm (in case you add later)
+node_modules/
+
+# Build files
+dist/
+build/
+*.log
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Editor-specific
+.vscode/
+.idea/
+
+# Environment files
+.env
+.env.local
+
+# Git-related
+.gitignore
+
+

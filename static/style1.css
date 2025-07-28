@@ -1,0 +1,230 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+  --input-bg: rgba(255, 255, 255, 0.1);
+  --input-text: #f1f5f9;
+  --placeholder-text: #cbd5e1;
+  --link-color: #93c5fd;
+  --link-hover: #bfdbfe;
+  --button-bg: #3b82f6;
+  --button-hover: #2563eb;
+  --button-active: #1d4ed8;
+  --text-main: #f5f5f5;
+  --bg-modal: #e2e8f0;
+}
+
+.lightmode{
+  --input-bg: rgba(0, 0, 0, 0.05);
+  --input-text: #1f2937;
+  --placeholder-text: #6b7280;
+  --link-color: #2563eb;
+  --link-hover: #1e40af;
+  --button-bg: #3b82f6;
+  --button-hover: #f59e0b;
+  --button-active: #d97706;
+  --text-main: #0f172a;
+  --bg-modal: #e2e8f0;
+}
+
+.login-box, .signup-box{
+    height: 100%;
+    width: 100%;
+    max-width: 550px;
+    padding: 20px;
+    position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    border-radius: 20px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    color: var(--logo-chatbot);
+    transition: opacity 0.3s ease;
+}
+
+.login-box-name_and_text-h3,
+.login-box-login-text-h4, 
+.signup-box-name_and_text-h3,
+.signup-box-login-text-h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--text-main);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.login-box-name_and_text-p,
+.login-box-forgot-password,
+.login-box-hr-bar,
+.login-box-sign-up,
+.signup-box-name_and_text-p,
+.signup-box-login-p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-main);
+}
+
+.input-group{
+    background-color: var(--input-bg);
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    transition: box-shadow 0.3s ease;
+}
+
+.input-group:hover,
+.input-group:focus-within {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.input-group svg{
+    margin: 10px;
+    fill: var(--placeholder-text);
+}
+
+.input-group .vr{
+    height: 45px;
+    width: 2px;
+    opacity: 0.3;
+    border-radius: 1px;
+    background-color: var(--placeholder-text);
+}
+
+.input-group .form-control{
+    outline: none;
+    background-color: transparent;
+    border: none;
+    color: var(--input-text);
+    border-radius: 0 10px 10px 0;
+}
+
+.input-group .form-control::placeholder {
+    color: var(--placeholder-text);
+}
+
+.input-group .form-control:focus {
+    box-shadow: none;
+    border-color: inherit;
+    outline: none;
+    color: var(--placeholder-text);
+}
+
+.input-group .form-control:-webkit-autofill {
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0px 1000px var(--input-bg) inset !important;
+    -webkit-text-fill-color: var(--input-text) !important;
+}
+
+.login-box-forgot-password {
+    max-width: 390px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.login-box-forgot-password-a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.login-box-forgot-password-a:hover{
+    text-decoration: underline;
+    color: var(--link-hover);
+}
+
+.login-box-forgot-password .form-check-input:focus{
+    box-shadow: none;
+    border-color: inherit;
+    outline: none;
+    border: none;
+}
+
+.login-box-login-button button,
+.signup-box-signup-button button{
+    border: none;
+    outline: none;
+    max-width: 400px;
+    padding: 10px 22px;
+    border-radius: 10px;
+    background-color: var(--button-bg);
+    width: 100%;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.login-box-login-button button:hover, .signup-box-signup-button button:hover {
+    /* background-color: var(--button-hover); */
+    cursor: pointer;
+}
+
+.login-box-login-button button:active, .signup-box-signup-button button:active {
+    /* background-color: var(--button-active); */
+    transform: scale(0.98);  
+}
+
+.login-box-hr-bar{
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-main);
+}
+
+.login-box-icons svg{
+    border-radius: 100%;
+    padding: 3px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-main);
+
+}
+
+.login-box-icons svg:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.login-box-sign-up a, 
+.signup-box-login a{
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: 500;
+}
+
+.login-box-sign-up a:hover, 
+.signup-box-login a:hover{
+    text-decoration: underline;
+    color: var(--link-hover);
+}
+
+.modal-button{
+    display: flex;
+    justify-content: center;
+    border: none;
+    max-width: 80px;
+    outline: none;
+    padding: 10px 22px;
+    border-radius: 10px;
+    background-color: var(--button-bg);
+    width: 100%;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+

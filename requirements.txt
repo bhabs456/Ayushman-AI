@@ -1,0 +1,12 @@
+langchain
+flask
+pypdf
+pydantic
+pinecone-client
+protobuf
+sentence-transformers
+python-dotenv
+langchain-community
+google-generativeai
+langchain_experimental
+-e .
